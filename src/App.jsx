@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jbvdewalnoot.pages.dev/api/data")
+    fetch("/api/data")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
