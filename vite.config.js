@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   proxy: {
     "/api": {
-      target: "https://jbv.niklas-van-nguyen.workers.dev/",
+      target: "https://jbv.niklas-van-nguyen.workers.dev",
       changeOrigin: true,
       secure: false,
     },
