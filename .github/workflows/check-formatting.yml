@@ -1,0 +1,28 @@
+name: Check Formatting
+
+on:
+  pull_request:
+    branches: [main, dev] 
+  push:
+    branches: [dev]
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.6.0'  # Specify your Node.js version
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Check Prettier Formatting
+        run: |
+          npx prettier --check '**/*.{js,mjs,cjs,ts,jsx,tsx}'
