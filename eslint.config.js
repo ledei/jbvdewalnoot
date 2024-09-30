@@ -15,5 +15,10 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off', // Disable the rule that requires React in scope
     },
+    settings: {
+      react: {
+        version: 'detect', // Automatically detect the version of React
+      },
+    },
   },
 ];

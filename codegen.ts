@@ -9,6 +9,18 @@ const config: CodegenConfig = {
       presetConfig: {
         gqlTagName: 'gql',
       },
+      plugins: [
+        'typescript', // Generate TypeScript types
+        'typescript-operations', // Generate TypeScript operations
+        {
+          'typescript-react-apollo': {
+            // Generate React hooks
+            withHOC: false,
+            withComponent: false,
+            withRefetchFn: true,
+          },
+        },
+      ],
     },
   },
   ignoreNoDocuments: true,
