@@ -1,6 +1,6 @@
 # To run
 
-Make sure your node is on v22.6.0
+Make sure your node is on v18.20.4
 
 Then run the following commands
 ```
